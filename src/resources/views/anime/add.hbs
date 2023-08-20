@@ -1,0 +1,119 @@
+<div class='mx-auto my-5 w-3/4 rounded-md text-gray-300'>
+  <form class='mb-4 rounded bg-white px-8 pb-8 pt-6 shadow-md' method='post'>
+    <div class='mb-4'>
+      <label class='mb-2 block text-sm font-bold text-gray-700' for='name'>
+        Name Anime
+      </label>
+      <input
+        class='focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none'
+        id='name'
+        name='name'
+        type='text'
+        placeholder='Name Anime'
+      />
+    </div>
+    <div class='mb-4'>
+      <label
+        class='mb-2 block text-sm font-bold text-gray-700'
+        for='description'
+      >
+        Description
+      </label>
+      <textarea
+        rows='4'
+        class='w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-700 shadow'
+        placeholder='Write description here...'
+        name='description'
+        id='description'
+        placeholder='Description'
+      ></textarea>
+    </div>
+    <div class='mb-4'>
+      <div class='mx-auto flex w-3/12 items-center justify-center'>
+        <label
+          for='dropzone-file'
+          class='dark:hover:bg-bray-800 image-preview flex h-56 w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 bg-[length:303px_160px] bg-center bg-no-repeat object-cover hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-200 dark:hover:border-gray-500 dark:hover:bg-gray-100'
+        >
+          <div
+            class='text-content flex flex-col items-center justify-center pb-6 pt-5'
+          >
+            <svg
+              class='mb-4 h-8 w-8 text-gray-500 dark:text-gray-400'
+              aria-hidden='true'
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 20 16'
+            >
+              <path
+                stroke='currentColor'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2'
+              />
+            </svg>
+            <p class='mb-2 text-sm text-gray-500 dark:text-gray-400'><span
+                class='font-semibold'
+              >Click to upload</span>
+              or drag and drop</p>
+            <p class='text-xs text-gray-500 dark:text-gray-400'>SVG, PNG, JPG or
+              GIF (MAX. 800x400px)</p>
+          </div>
+          <input id='dropzone-file' name='image' type='file' class='hidden' />
+        </label>
+      </div>
+
+    </div>
+    <div class='mb-4'>
+      <label class='mb-2 block text-sm font-bold text-gray-700' for='slug'>
+        Slug
+      </label>
+      <input
+        class='focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none'
+        id='slug'
+        name='slug'
+        type='text'
+        placeholder='Slug'
+      />
+    </div>
+    <div class='mb-4'>
+      <fieldset>
+        <legend>URLS:</legend>
+        <div class='list-url text-gray-700'>
+          <div class='url my-2'>
+            <label for='url-0-name' class='font-bold'>Name:</label>
+            <input
+              type='text'
+              id='url-0-name'
+              name='url-name'
+              class='mr-2 rounded-md border border-gray-200 shadow'
+            />
+            <label for='url-0-link' class='font-bold'>Link:</label>
+            <input
+              type='text'
+              id='url-0-link'
+              class='mr-2 rounded-md border border-gray-200 shadow'
+              name='url-link'
+            />
+          </div>
+
+        </div>
+        <button
+          type='button'
+          class='focus:shadow-outline mt-2 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none'
+          onclick='addUrl()'
+        >Add URL</button>
+      </fieldset>
+    </div>
+    <div class='flex items-center justify-between'>
+      <button
+        class='focus:shadow-outline rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none'
+        type='submit'
+      >
+        Sign In
+      </button>
+    </div>
+  </form>
+</div>
+
+<script src='/js/animeAdd.js'></script>

@@ -1,0 +1,7 @@
+<div class='mx-80 mt-5'>
+  <div class='grid grid-cols-4 gap-5'>
+    {{#each animes}}
+    <div class='row-span-2'>{{> card title=this.name description=this.description image=this.image}}</div>
+    {{/each}}
+  </div>
+</div>

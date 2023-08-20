@@ -1,0 +1,28 @@
+<div class='mx-auto my-5 w-3/4 rounded-md bg-[#3e4444] p-10 text-gray-300'>
+  <img
+    src='{{anime.image}}'
+    class='mx-auto w-5/6 rounded-lg object-cover'
+    alt=''
+  />
+  <h2
+    class='mt-4 text-center text-4xl font-bold text-gray-200'
+  >{{anime.name}}</h2>
+
+  <div class='mx-auto mt-2 w-5/6'>
+    <p class='text-lg'>{{anime.description}}</p>
+    <h2 class='mt-4 text-4xl font-bold text-gray-200'>Liên kết:</h2>
+    <ul>
+      {{#each anime.urls}}
+        <li class='mt-2'>
+          <a
+            href={{this.link}}
+            class='rounded-lg bg-blue-400 px-4 py-2 text-xl text-gray-200'
+            target='_blank'
+          >
+            {{this.name}}
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
