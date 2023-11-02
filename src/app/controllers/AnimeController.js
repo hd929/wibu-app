@@ -17,7 +17,7 @@ class AnimeController {
   store(req, res) {
     // const anime = new Anime(req.body)
     // anime.save()
-    res.json(req.body)
+    console.log(req.body.image)
   }
 }
 
